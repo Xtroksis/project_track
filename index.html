@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title data-lang="title">The tracks you're looking for</title>
+  </head>
+  <body>
+    <header>
+      <img src="image/imusical-note-64.png" alt="logo" class="logo" />
+      <h1 data-lang="title">The tracks you're looking for</h1>
+      <button id="language-toggle" data-lang="language_toggle">RU | EN</button>
+    </header>
+
+    <main>
+      <p data-lang="description">
+        Enter the name of the song, artist, or keywords.
+      </p>
+      <form id="searchForm">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="For example: O Green World - Gorillaz"
+          data-lang-placeholder="search_placeholder"
+        />
+        <button id="searchButton" data-lang="search_button">Search</button>
+      </form>
+      <button
+        id="theme-toggle"
+        class="theme-toggle-btn"
+        data-lang="theme_toggle"
+      ></button>
+    </main>
+
+    <section id="results">
+      <h2 data-lang="results_title">Search Results:</h2>
+      <div
+        id="error-message"
+        style="display: none; color: red"
+        data-lang="error_message"
+      >
+        Unfortunately, nothing was found. Try another query.
+      </div>
+      <div class="track-list"></div>
+    </section>
+
+    <div id="search-history">
+      <h3 data-lang="history">Search History:</h3>
+      <button
+        id="clear-history"
+        class="clear-history-btn"
+        data-lang="clear_history"
+      >
+        Clear the history
+      </button>
+      <div id="history-list"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
